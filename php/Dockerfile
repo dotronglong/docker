@@ -1,5 +1,9 @@
 FROM php:5.6.22-alpine
 
+# Persistent / runtime deps
+RUN apk update && apk upgrade \
+		&& apk add g++ make curl wget bash
+
 # INSTALL BZIP 2 #
 RUN wget -c http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz \
 	&& tar -xzf bzip2-1.0.6.tar.gz \
@@ -58,3 +62,5 @@ RUN wget -c https://phar.phpunit.de/phpcpd.phar --no-check-certificate \
 	&& mv phpcpd.phar /usr/local/bin/phpcpd
 # END PHPCPD INSTALLATION #
 #############################
+
+CMD ["/bin/bash"]
