@@ -1,5 +1,7 @@
 FROM jenkins:latest
 
-EXPOSE 8080
+RUN apk-get update \
+    && apk-get install curl
 
-USER jenkins
+# Install Docker    
+curl -fsSL https://get.docker.com/ | sh
