@@ -1,2 +1,2 @@
 #!/bin/sh
-docker run --rm ${DOCKER_PHP} php
+docker run --rm ${DOCKER_PHP} php ${@}
