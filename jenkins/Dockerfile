@@ -7,7 +7,7 @@ RUN apt-get update \
 
 ENV DOCKER_PHP=dotronglong/php:5.6.22-alpine
 
-COPY ./bin /usr/local/bin/
+ADD ./bin /usr/local/bin/
 RUN chmod +x /usr/local/bin/*
 
 USER jenkins
