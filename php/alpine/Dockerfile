@@ -1,6 +1,11 @@
 FROM php:5.6-alpine
 
-RUN docker-php-ext-install pcntl bcmath mbstring xsl
+RUN apk update \
+    && apk add \
+      libxslt-dev libxslt \
+      libpng-dev gd-dev gd \
+      bzip2-dev bzip2 \
+    && docker-php-ext-install -j5 pcntl bcmath xsl gd bz2
 
 RUN addgroup -g 1988 php
 RUN adduser -HD -u 1988 -G php php
