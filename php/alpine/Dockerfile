@@ -9,3 +9,4 @@ ENV PHP_CONF_DIR ${PHP_INI_DIR}/conf.d
 COPY "conf.d" ${PHP_CONF_DIR}
 
 WORKDIR /app
+ENTRYPOINT ["php"]
