@@ -1,4 +1,4 @@
-FROM dotronglong/php
+FROM dotronglong/php-alpine
 
 RUN pear install PHP_CodeSniffer
 
