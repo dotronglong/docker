@@ -4,10 +4,16 @@ MAINTAINER me@dotronglong.com
 USER root
 RUN apt-get update \
     && apt-get install -y curl wget docker.io
-
-ENV DOCKER_PHP=dotronglong/php:5.6.22-alpine
-
 ADD ./bin /usr/local/bin/
 RUN chmod +x /usr/local/bin/*
 
 USER jenkins
+
+ENV DOCKER_USER 1988
+ENV DOCKER_TLS_VERIFY 1
+ENV DOCKER_CERT_PATH /opt/docker/cert
+ENV DOCKER_HOST tcp://192.168.99.100:2376
+ENV DOCKER_MACHINE_NAME default
+
+ENV DOCKER_COMPOSER composer:test
+ENV DOCKER_PHP php:test

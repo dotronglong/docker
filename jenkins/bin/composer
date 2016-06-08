@@ -1,2 +1,2 @@
 #!/bin/sh
-docker run --rm ${DOCKER_PHP} composer ${@}
+docker run --rm ${DOCKER_COMPOSER} -u ${DOCKER_USER} -v $(pwd):/app composer ${@}
