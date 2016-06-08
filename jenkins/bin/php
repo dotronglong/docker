@@ -1,2 +1,2 @@
 #!/bin/sh
-docker run --rm ${DOCKER_PHP} php ${@}
+docker run -it --rm -u ${DOCKER_USER} -v $(pwd):${DOCKER_APP_DIR} ${DOCKER_PHP} ${@}

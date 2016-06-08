@@ -1,0 +1,2 @@
+#!/bin/sh
+docker run -it --rm -u ${DOCKER_USER} -v $(pwd):${DOCKER_APP_DIR} ${DOCKER_PHPDOX} ${@}
