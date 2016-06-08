@@ -1,9 +1,7 @@
-FROM dotronglong/php
+FROM php:test
 
 ADD https://phar.phpunit.de/phpunit.phar /usr/local/bin/phpunit
-RUN chmod 755 /usr/local/bin/phpunit
-RUN pecl install xdebug \
-    && docker-php-ext-enable xdebug
-COPY xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+RUN chmod +x /usr/local/bin/phpunit
+COPY phpunit.ini /usr/local/etc/php/conf.d/phpuni.ini
 
-ENTRYPOINT ["/usr/local/bin/phpunit"]
+ENTRYPOINT ["phpunit"]
