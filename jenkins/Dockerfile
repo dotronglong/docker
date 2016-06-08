@@ -22,3 +22,4 @@ ENV DOCKER_PHPUNIT dotronglong/phpunit
 ENV DOCKER_PHPCS dotronglong/phpcs
 ENV DOCKER_PHPCPD dotronglong/phpcpd
 ENV DOCKER_PHPLOC dotronglong/phploc
+ENV DOCKER_PHPDOX dotronglong/phpdox
