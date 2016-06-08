@@ -6,6 +6,4 @@ RUN apk update \
 ADD https://getcomposer.org/installer /composer-setup.php
 RUN php /composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
-WORKDIR /app
 ENTRYPOINT ["composer"]
-RUN cat /etc/passwd
