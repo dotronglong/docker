@@ -20,8 +20,8 @@ RUN docker-php-ext-install -j$(nproc) \
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug
 
-RUN mkdir /home/php \
- 		&& useradd -u 1000 -d /home/docker -s /bin/bash -MU php \
+RUN mkdir /home/docker \
+ 		&& useradd -u 1000 -d /home/docker -s /bin/bash -MU docker \
 		&& chown 1000:1000 /home/docker
 
 ENV PHP_CONF_DIR ${PHP_INI_DIR}/conf.d

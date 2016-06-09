@@ -9,7 +9,7 @@ RUN apk update \
 
 RUN mkdir /home/docker \
     && addgroup -g 1000 docker \
-    && adduser -HD -u 1000 -G docker php \
+    && adduser -HD -u 1000 -G docker docker \
     && chown 1000:1000 /home/docker
 
 ENV PHP_CONF_DIR ${PHP_INI_DIR}/conf.d
