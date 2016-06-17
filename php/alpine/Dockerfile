@@ -2,6 +2,7 @@ FROM php:5.6-alpine
 
 RUN apk update \
     && apk add \
+      git bash \
       libxslt-dev libxslt \
       libpng-dev gd-dev gd \
       bzip2-dev bzip2 \

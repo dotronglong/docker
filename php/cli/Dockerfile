@@ -2,6 +2,7 @@ FROM php:5.6-cli
 
 RUN apt-get update \
 	  && apt-get install -y \
+			 git bash \
        libxslt1-dev \
        libbz2-dev bzip2 \
        libmcrypt-dev \
