@@ -16,7 +16,7 @@ ENV DOCKER_HOST tcp://192.168.99.100:2376
 ENV DOCKER_MACHINE_NAME default
 
 ENV DOCKER_APP_DIR /app
-ENV DOCKER_PHP dotronglong/php
+ENV DOCKER_PHP dotronglong/php-alpine
 ENV DOCKER_COMPOSER dotronglong/composer
 ENV DOCKER_PHPUNIT dotronglong/phpunit
 ENV DOCKER_PHPCS dotronglong/phpcs
