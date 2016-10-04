@@ -1,8 +1,10 @@
-# What is Jenkins
+# Jenkins
+[![](https://images.microbadger.com/badges/image/dotronglong/jenkins.svg)](https://microbadger.com/images/dotronglong/jenkins)
 
+## What is Jenkins
 See more [Jenkins Website](https://jenkins.io/)
 
-# How to use this image
+## How to use this image
 ### Run a standalone Jenkins
 Find out your docker host current information
 ```console
