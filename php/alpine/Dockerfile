@@ -5,7 +5,9 @@ RUN apk update \
       libxslt-dev libxslt \
       libpng-dev gd-dev gd \
       bzip2-dev bzip2 \
-    && docker-php-ext-install -j5 pcntl bcmath xsl gd bz2
+      icu-dev autoconf g++ make \
+    && docker-php-ext-configure intl \
+    && docker-php-ext-install -j6 pcntl bcmath xsl gd bz2 intl
 
 RUN mkdir /home/docker \
     && addgroup -g 1000 docker \
