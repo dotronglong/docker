@@ -7,7 +7,9 @@ RUN apk update \
       bzip2-dev bzip2 \
       icu-dev autoconf g++ make \
     && docker-php-ext-configure intl \
-    && docker-php-ext-install -j6 pcntl bcmath xsl gd bz2 intl
+    && docker-php-ext-install pcntl bcmath \
+        xsl gd bz2 intl \
+        mysqli pdo pdo_mysql
 
 RUN mkdir /home/docker \
     && addgroup -g 1000 docker \
