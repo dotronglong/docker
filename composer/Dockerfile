@@ -1,4 +1,4 @@
-FROM dotronglong/php-alpine
+FROM dotronglong/php
 
 RUN apk update \
     && apk add git openssh unzip
