@@ -1,2 +1,2 @@
-FROM dotronglong/godep
+FROM dotronglong/dep
 RUN apk add build-base
