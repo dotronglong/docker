@@ -1,4 +1,4 @@
-FROM php:5.6-alpine
+FROM php:7.2-alpine
 
 RUN apk update \
     && apk add \
