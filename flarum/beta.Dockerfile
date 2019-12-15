@@ -16,4 +16,4 @@ RUN composer create-project flarum/flarum . --stability=beta \
     && yes "Y" | ./vendor/bin/upgrade-carbon
 
 EXPOSE 8080
-CMD [ "php", "-S", "0.0.0.0:8080", "-t", "public" ]
+CMD [ "-S", "0.0.0.0:8080", "-t", "public" ]
