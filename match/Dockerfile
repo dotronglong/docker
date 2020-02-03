@@ -1,4 +1,5 @@
 FROM dotronglong/fastlane
 RUN apk update \
-    && apk add curl git \
+    && apk add bash \
+               curl git \
                openssh openssl
